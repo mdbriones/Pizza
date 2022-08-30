@@ -63,6 +63,7 @@
     $(document).ready(function(){
         var host = window.location.origin;
         $(".files").click(function(){
+            alert(host);
             $.get(host + "/file-show/", {filename:this.text}, function(data){
                 $('#pmlFile').text(data);
                 $('#convert').show();
