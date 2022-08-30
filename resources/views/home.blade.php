@@ -61,8 +61,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
+        var host = window.location.origin;
         $(".files").click(function(){
-            $.get("/file-show/", {filename:this.text}, function(data){
+            $.get(host + "/file-show/", {filename:this.text}, function(data){
                 $('#pmlFile').text(data);
                 $('#convert').show();
             });
