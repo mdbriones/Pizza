@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('size');
             $table->string('crust');
             $table->string('type');
-            $table->json('toppings')->nullable();
+            $table->longText('toppings')->nullable();
             $table->timestamps();
         });
     }
