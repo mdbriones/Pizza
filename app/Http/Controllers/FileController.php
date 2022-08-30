@@ -26,6 +26,7 @@ class FileController extends Controller
 
     public function index()
     {
+        dd(config('app.env'));
         $orders = self::getAvailableOrders();
         return view('home', compact('orders'));
     }
